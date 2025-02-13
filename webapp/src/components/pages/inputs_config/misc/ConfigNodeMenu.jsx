@@ -36,6 +36,8 @@ import MinValueNode from "../nodes/MinValueNode";
 import MaxValueNode from "../nodes/MaxValueNode";
 import AddValuesNode from "../nodes/AddValuesNode";
 import SubtractValuesNode from "../nodes/SubtractValuesNode";
+import MultiplyValuesNode from "../nodes/MultiplyValuesNode";
+import DivideValuesNode from "../nodes/DivideValuesNode";
 import InvertValueNode from "../nodes/InvertValueNode";
 import NotEqualsNode from "../nodes/NotEqualsNode";
 import GreaterThanOrEqualsNode from "../nodes/GreaterThanOrEqualsNode";
@@ -120,6 +122,8 @@ const ConfigNodeMenu = () => {
         {type: "node", node: TrimValueNode},
         {type: "node", node: AddValuesNode},
         {type: "node", node: SubtractValuesNode},
+        {type: "node", node: MultiplyValuesNode},
+        {type: "node", node: DivideValuesNode},
         {type: "node", node: InvertValueNode},
     ];
 

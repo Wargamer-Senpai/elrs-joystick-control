@@ -11,6 +11,8 @@ import NotEqualsNode from "./NotEqualsNode";
 import InvertValueNode from "./InvertValueNode";
 import AddValuesNode from "./AddValuesNode";
 import SubtractValuesNode from "./SubtractValuesNode";
+import MultiplyValuesNode from "./MultiplyValuesNode";
+import DivideValuesNode from "./DivideValuesNode";
 import MinValueNode from "./MinValueNode";
 import MaxValueNode from "./MaxValueNode";
 import GamepadNode from "./GamepadNode";
@@ -44,6 +46,8 @@ export const nodeTypes = () => {
         [InvertValueNode.type]: InvertValueNode,
         [AddValuesNode.type]: AddValuesNode,
         [SubtractValuesNode.type]: SubtractValuesNode,
+        [MultiplyValuesNode.type]: MultiplyValuesNode,
+        [DivideValuesNode.type]: DivideValuesNode,
         [MinValueNode.type]: MinValueNode,
         [MaxValueNode.type]: MaxValueNode,
         [GamepadNode.type]: GamepadNode,

@@ -94,6 +94,8 @@ func _NewTypesMap() (*map[string]reflect.Type, error) {
 		reflect.TypeOf(InputChannel{}),
 		reflect.TypeOf(InputAdd{}),
 		reflect.TypeOf(InputSubtract{}),
+		reflect.TypeOf(InputMultiply{}), 
+		reflect.TypeOf(InputDivide{}),
 		reflect.TypeOf(InputMin{}),
 		reflect.TypeOf(InputMax{}),
 		reflect.TypeOf(InputInvert{}),

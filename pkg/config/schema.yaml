@@ -44,6 +44,8 @@ definitions:
           - seq
           - add
           - subtract
+          - multiply
+          - divide
           - max
           - min
           - invert
@@ -79,6 +81,10 @@ definitions:
         $ref: '#/definitions/add'
       subtract:
         $ref: '#/definitions/subtract'
+      multiply:
+        $ref: '#/definitions/multiply'
+      divide:
+        $ref: '#/definitions/divide'
       max:
         $ref: '#/definitions/max'
       min:
@@ -1040,6 +1046,96 @@ definitions:
         description: |
           Performs `out = (left - right)` operation. More than one value is
           allowed on the right side. i.e. `out = (left - right[0] - right[1] -
+          right[n] ... )` etc.
+        required:
+          - left
+        properties:
+          label:
+            title: Label
+            description: A short descriptive name
+            type: string
+          left:
+            title: Left input
+            $meta:
+              handle: in1
+            $ref: '#/definitions/input'
+          right_default:
+            title: Default right value
+            description: 'If there is no right input, use this value instead.'
+            type: integer
+            $meta:
+              autocomplete: raw
+          right:
+            type: array
+            title: Right inputs
+            minItems: 0
+            $meta:
+              handle: in2
+            items:
+              $ref: '#/definitions/input'
+        unevaluatedProperties: true
+    unevaluatedProperties: true
+  multiply:
+    type: object
+    required:
+      - type
+      - multiply
+    properties:
+      type:
+        type: string
+        enum:
+          - multiply
+      multiply:
+        type: object
+        title: Multiply values
+        description: |
+          Performs `out = (left * right)` operation. More than one value is
+          allowed on the right side. i.e. `out = (left * right[0] * right[1] *
+          right[n] ... )` etc.
+        required:
+          - left
+        properties:
+          label:
+            title: Label
+            description: A short descriptive name
+            type: string
+          left:
+            title: Left input
+            $meta:
+              handle: in1
+            $ref: '#/definitions/input'
+          right_default:
+            title: Default right value
+            description: 'If there is no right input, use this value instead.'
+            type: integer
+            $meta:
+              autocomplete: raw
+          right:
+            type: array
+            title: Right inputs
+            minItems: 0
+            $meta:
+              handle: in2
+            items:
+              $ref: '#/definitions/input'
+        unevaluatedProperties: true
+    unevaluatedProperties: true
+  divide:
+    type: object
+    required:
+      - type
+      - divide
+    properties:
+      type:
+        type: string
+        enum:
+          - divide
+      divide:
+        type: object
+        title: Divide values
+        description: |
+          Performs `out = (left / right)` operation. More than one value is
+          allowed on the right side. i.e. `out = (left / right[0] / right[1] /
           right[n] ... )` etc.
         required:
           - left
