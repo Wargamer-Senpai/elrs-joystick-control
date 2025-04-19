@@ -3,7 +3,4 @@
 # SPDX-License-Identifier: FS-0.9-or-later
 
 .idea
-build
 *.iml
-node_modules
-node_modules/**
