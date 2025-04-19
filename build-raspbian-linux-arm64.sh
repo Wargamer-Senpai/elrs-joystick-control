@@ -28,6 +28,8 @@ mkdir go
 
 export CC=gcc
 export CGO_ENABLED=1
+export CGO_CFLAGS="$(pkg-config --cflags sdl2)"
+export CGO_LDFLAGS="$(pkg-config --libs sdl2)"
 export GOPATH="${PWD}/go"
 export GOROOT="${PWD}/go-sdk"
 export GOARCH arm
